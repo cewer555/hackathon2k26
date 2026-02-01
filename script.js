@@ -98,10 +98,10 @@ class ShootingBlade {
 
     draw() {
         ctx.save();
-        ctx.strokeStyle = `rgba(0, 242, 254, ${this.opacity})`;
-        ctx.lineWidth = 2;
-        ctx.shadowColor = "#00f2fe";
-        ctx.shadowBlur = 25;
+        ctx.strokeStyle = `rgba(255,255,255, ${this.opacity})`;
+        ctx.lineWidth = 3;
+        ctx.shadowColor = "purple";
+        ctx.shadowBlur = 10;
 
         ctx.beginPath();
         ctx.moveTo(

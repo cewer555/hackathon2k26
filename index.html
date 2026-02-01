@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hackathon2k26</title>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+
 </head>
 <body>
 
@@ -27,6 +30,9 @@
 
     <!-- Hero Section -->
     <section class="hero intro">
+    <div id="stars"></div>
+  <div id="stars2"></div>
+  <div id="stars3"></div>
     <canvas id="techCanvas"></canvas>
 
     <div class="hero-content">
@@ -38,14 +44,87 @@
 <!-- EVENT DETAILS SECTION -->
 <section id="events" class="events-section">
     <h2 class="section-title">Event Details</h2>
+    <div class="events-grid">
+    <div class="event-card" onclick="this.classList.toggle('flipped')">
+    <div class="event-card-inner">
 
-    <!-- ADD YOUR EVENT DETAILS BELOW -->
-    <div class="events-placeholder">
-        <h5>Smart Idea Hackathon</h5>
-        <h5>Codeathon</h5>
-        <h5>UI/UX DesignAThon</h5>
+        <!-- FRONT -->
+        <div class="event-card-front">
+            <img src="ChatGPT Image Feb 1, 2026, 12_45_51 PM.png" alt="Codeathon">
+             <h5>Smart Idea Hackathon</h5>
+            <p>Innovate and pitch solutions to real-world problems.</p>
+        </div>
+
+        <!-- BACK -->
+        <div class="event-card-back">
+            <h5>Smart Idea Hackathon</h5>
+            <ul>
+                <li><strong>Start:</strong> 10:00 AM</li>
+                <li><strong>End:</strong> 10:00 PM</li>
+                <li><strong>Duration:</strong> 12 Hours</li>
+                <li><strong>Venue:</strong> Main Lab Block</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+           
+        
+
+        <div class="event-card" onclick="this.classList.toggle('flipped')">
+    <div class="event-card-inner">
+
+        <!-- FRONT -->
+        <div class="event-card-front">
+            <img src="ChatGPT Image Feb 1, 2026, 12_44_34 PM.png" alt="Codeathon">
+            <h5>Codeathon</h5>
+            <p>Build, code, and deploy within limited time.</p>
+        </div>
+
+        <!-- BACK -->
+        <div class="event-card-back">
+            <h5>Codeathon</h5>
+            <ul>
+                <li><strong>Start:</strong> 10:00 AM</li>
+                <li><strong>End:</strong> 10:00 PM</li>
+                <li><strong>Duration:</strong> 12 Hours</li>
+                <li><strong>Venue:</strong> Main Lab Block</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+        <div class="event-card" onclick="this.classList.toggle('flipped')">
+    <div class="event-card-inner">
+
+        <!-- FRONT -->
+        <div class="event-card-front">
+            <img src="ChatGPT Image Feb 1, 2026, 12_47_21 PM.png" alt="UI/UX Designathon">
+            <h5>UI/UX Designathon</h5>
+            <p>Design intuitive and aesthetic user experiences.</p>
+        </div>
+
+        <!-- BACK -->
+        <div class="event-card-back">
+            <h5>UI/UX Designathon</h5>
+            <ul>
+                <li><strong>Start:</strong> 10:00 AM</li>
+                <li><strong>End:</strong> 10:00 PM</li>
+                <li><strong>Duration:</strong> 12 Hours</li>
+                <li><strong>Venue:</strong> Main Lab Block</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+    </div>
     </div>
 </section>
+
 
 
 
