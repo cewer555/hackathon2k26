@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon2k26</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        
+        <ul class="nav-links">
+            <li><a href="#event">Event</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#register">Register</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero intro">
+    <canvas id="techCanvas"></canvas>
+
+    <div class="hero-content">
+        <h1 class="intro-title">Hackathon2k26</h1>
+        <a href="#events" class="btn intro-btn">Register</a>
+    </div>
+</section>
+
+<!-- EVENT DETAILS SECTION -->
+<section id="events" class="events-section">
+    <h2 class="section-title">Event Details</h2>
+
+    <!-- ADD YOUR EVENT DETAILS BELOW -->
+    <div class="events-placeholder">
+        <h5>Smart Idea Hackathon</h5>
+        <h5>Codeathon</h5>
+        <h5>UI/UX DesignAThon</h5>
+    </div>
+</section>
+
+
+
+
+    <!-- About Section
+    <section id="about" class="section">
+        <h2>About the Event</h2>
+        <p>
+            Hackathon2k26 is a 24-hour national-level coding competition
+            where students collaborate, innovate, and build amazing solutions.
+        </p>
+    </section> -->
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section dark">
+        <h2>Event Schedule</h2>
+        <ul class="schedule">
+            <li><strong>Day 1:</strong> Opening Ceremony & Problem Statement</li>
+            <li><strong>Day 1:</strong> Coding Begins</li>
+            <li><strong>Day 2:</strong> Final Submission</li>
+            <li><strong>Day 2:</strong> Results & Awards</li>
+        </ul>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="section">
+        <h2>Register Now</h2>
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Your Name" required />
+            <input type="email" id="email" placeholder="Your Email" required />
+            <input type="text" id="college" placeholder="College Name" required />
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Hackathon2k26 | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

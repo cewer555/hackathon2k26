@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Navbar */
+/* NAVBAR FIX */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    z-index: 9999;   /* VERY IMPORTANT */
+}
+
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;                 /* spacing between items */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+}
+
+/* Optional hover underline effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #00f2fe;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* Hero */
+/* ===== TECHNO HERO ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: radial-gradient(circle at top, #0a0f1f, #02030a);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Canvas animation */
+#techCanvas {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* Content above canvas */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #e0e0ff;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 20px #00f2fe;
+}
+
+.hero p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #9aa4ff;
+}
+
+/* Neon button */
+.hero .btn {
+    background: transparent;
+    border: 2px solid #00f2fe;
+    color: #00f2fe;
+    padding: 14px 30px;
+    margin-top: 25px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px #00f2fe;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background: #00f2fe;
+    color: #02030a;
+    box-shadow: 0 0 30px #00f2fe;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: column;   /* stack vertically */
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+
+/* ===== INTRO HERO ===== */
+.intro {
+    position: relative;
+    height: 100vh;
+    background: #02030a;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Canvas behind */
+#techCanvas {
+    position: absolute;
+    inset: 0;
+    opacity: 0.35;
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Hackathon title animation */
+.intro-title {
+    font-size: 3.5rem;
+    color: #00f2fe;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: titleReveal 3s ease forwards;
+    text-shadow: 0 0 30px #00f2fe;
+}
+
+/* Register button */
+.intro-btn {
+    margin-top: 40px;
+    padding: 14px 34px;
+    border: 2px solid #00f2fe;
+    background: transparent;
+    color: #00f2fe;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: btnReveal 1.2s ease forwards;
+    animation-delay: 3s;
+}
+
+/* Animations */
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes btnReveal {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===== EVENTS SECTION ===== */
+.events-section {
+    min-height: 100vh;
+    background: #050814;
+    padding: 80px 20px;
+    color: #e0e0ff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Placeholder styling */
+.events-placeholder {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    border: 1px dashed #00f2fe;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+/* Visible on scroll */
+.events-placeholder.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 2.4rem;
+    }
+}
+
+#techCanvas {
+    opacity: 0.5;
+    filter: blur(0.4px);
+}
+
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.dark {
+    background: #f4f4f4;
+}
+
+.schedule {
+    list-style: none;
+    max-width: 600px;
+    margin: auto;
+}
+
+.schedule li {
+    padding: 10px;
+}
+
+/* Form */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive */
+
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    position: absolute;
+    right: 25px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #00f2fe;
+    border-radius: 2px;
+    transition: 0.4s ease;
+}
+
+/* Animate to X */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ===== MOBILE NAV ===== */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+        z-index: 10001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(2, 3, 10, 0.98);
+        color:white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1.4rem;
+    }
+}
