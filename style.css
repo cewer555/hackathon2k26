@@ -8,7 +8,7 @@
     --text-main: #e8e8ff;
     --text-muted: #a2a3c7;
 
-    --border-glow: rgba(63, 255, 220, 0.35);
+    --border-glow: white;
 }
 
 
@@ -42,10 +42,11 @@ body {
     background: rgba(2, 3, 10, 0.9);
     z-index: 9999;
     background: rgba(11, 10, 26, 0.9);
-    border-bottom: 1px solid var(--border-glow);
+    border-bottom: 1px solid white;
 
 
 }
+
 
 
 
@@ -551,6 +552,130 @@ h1, h2, h5 {
 } */
 .intro-title {
     color:white;
+}
+
+
+.section.dark {
+  /* background: #0b0f1a; */
+  color: #fff;
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid rgba(138, 43, 226, 0.4); /* violet accent */
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #8a2be2;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #8a2be2;
+}
+
+.timeline-item .time {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: #bda7ff;
+  margin-bottom: 6px;
+}
+
+.timeline-item p {
+  font-size: 1.1rem;
+  color: #e6e6ff;
+  margin: 0;
+}
+.event-card-back {
+  background: linear-gradient(135deg, #0f1325, #151a3a);
+  color: #fff;
+  padding: 24px;
+  height: 100%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.event-card-back h5 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #c9b8ff;
+}
+
+.event-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-details li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.event-details li:last-child {
+  border-bottom: none;
+}
+
+.event-details span {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9fa4ff;
+}
+
+.event-details strong {
+  font-weight: 500;
+  color: #ffffff;
+}
+#countdown {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+#countdown span {
+  background: rgba(138, 43, 226, 0.15);
+  padding: 14px 18px;
+  border-radius: 12px;
+  min-width: 70px;
+}
+
+#countdown small {
+  display: block;
+  font-size: 0.75rem;
+  color: #bda7ff;
+  margin-top: 4px;
 }
 
 

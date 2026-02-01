@@ -1,5 +1,5 @@
 // Countdown Timer
-const eventDate = new Date("March 15, 2026 10:00:00").getTime();
+const eventDate = new Date("February 19, 2026 10:00:00").getTime();
 const countdown = document.getElementById("countdown");
 
 setInterval(() => {
