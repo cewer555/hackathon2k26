@@ -143,6 +143,7 @@ h1, h2, h5 { color: var(--text-main); }
     border: 2px solid var(--accent);
     color: var(--accent);
     text-decoration: none;
+    border-radius: 15px;
     box-shadow: 0 0 15px var(--border-glow);
     transition: 0.3s;
 }
@@ -152,19 +153,53 @@ h1, h2, h5 { color: var(--text-main); }
     color: var(--bg-main);
 }
 
+/* dept */
+.department-section {
+
+    padding: 80px 20px;
+}
+
+.dept-container {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.dept-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.dept-tagline {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.dept-content p {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
 /* ===== EVENTS ===== */
 .events-section {
-    min-height: 100vh;
+    
     padding: 80px 20px;
     background: #050814;
 }
 
 .events-grid {
-    max-width: 1100px;
+    max-width: 1220px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+
 }
 
 .event-card {
@@ -180,6 +215,102 @@ h1, h2, h5 { color: var(--text-main); }
     transform: translateY(-8px);
     box-shadow: 0 0 30px var(--border-glow);
 }
+
+/* evnt front */
+.event-card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(145deg, #11102a, #0b0a1a);
+    border-radius: 18px;
+    padding: 28px 24px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(124, 124, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card-front:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(124, 124, 255, 0.3);
+}
+
+/* Badge */
+.event-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary);
+    color: #0b0a1a;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 50px;
+    letter-spacing: 1px;
+}
+
+/* Title */
+.event-title {
+    font-size: 1.6rem;
+    color: var(--text-main);
+    margin-top: 48px;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+/* Subtitle */
+.event-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* Coordinators */
+.event-coordinator h4 {
+    color: var(--primary);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.event-coordinator ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0px;
+}
+
+.event-coordinator li {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin: 4px 0;
+}
+
+.btn-card {
+    padding: 5px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+/* Button */
+.btn {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 10px 26px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: #0b0a1a;
+}
+
 
 /* ===== EVENT FLIP ===== */
 .event-card-inner {
@@ -213,12 +344,17 @@ h1, h2, h5 { color: var(--text-main); }
     padding: 24px;
 }
 
+#schedule {
+    justify-items: center;
+}
 /* ===== TIMELINE ===== */
 .timeline {
     max-width: 700px;
     margin: auto;
     padding-left: 30px;
     border-left: 2px solid rgba(138, 43, 226, 0.4);
+    font-size: 1.7rem;
+    
 }
 
 .timeline-item {
@@ -239,9 +375,19 @@ h1, h2, h5 { color: var(--text-main); }
     box-shadow: 0 0 12px #8a2be2;
 }
 
+ 
+
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
     .hamburger { display: flex; }
+
+    .dept-title {
+        font-size: 2rem;
+    }
+
+    .dept-content p {
+        font-size: 0.95rem;
+    }
 
     .nav-links {
         position: fixed;
@@ -271,4 +417,13 @@ h1, h2, h5 { color: var(--text-main); }
         font-size: 1.6rem;
         letter-spacing: 1px;
     }
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
 }
