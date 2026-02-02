@@ -20,3 +20,9 @@ setInterval(() => {
   document.getElementById("minutes").innerText = Math.floor((diff / (1000 * 60)) % 60);
   document.getElementById("seconds").innerText = Math.floor((diff / 1000) % 60);
 }, 1000);
+
+// // FORM
+// document.getElementById("registerForm").onsubmit = e => {
+//   e.preventDefault();
+//   document.getElementById("formMessage").innerText = "🎉 Registered Successfully!";
+// };
